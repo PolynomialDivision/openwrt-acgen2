@@ -185,6 +185,14 @@ define Device/ubnt_nanobeam-ac
 endef
 TARGET_DEVICES += ubnt_nanobeam-ac
 
+define Device/ubnt_nanobeam-ac-gen2
+  $(Device/ubnt-wa)
+  DEVICE_MODEL := NanoBeam AC
+  DEVICE_VARIANT := Gen2
+  DEVICE_PACKAGES += kmod-ath10k-ct ath10k-firmware-qca988x-ct rssileds
+endef
+TARGET_DEVICES += ubnt_nanobeam-ac-gen2
+
 define Device/ubnt_nanobridge-m
   $(Device/ubnt-xm)
   SOC := ar7241
